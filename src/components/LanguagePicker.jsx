@@ -22,6 +22,7 @@ export const LanguagePicker = () => {
         <GatsbyLink
           aria-label={`Change language to ${supportedLang}`}
           to={`/${supportedLang}${originalPath}`}
+          key={supportedLang}
         >
           {supportedLang.toUpperCase()}
         </GatsbyLink>
