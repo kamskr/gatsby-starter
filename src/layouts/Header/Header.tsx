@@ -1,11 +1,11 @@
-import { Link } from 'gatsby';
 import React from 'react';
+import { Link } from 'gatsby';
 
 interface HeaderProperties {
     siteTitle: string;
 }
 
-const Header = ({ siteTitle }: HeaderProperties): JSX.Element => (
+export const Header = ({ siteTitle }: HeaderProperties): JSX.Element => (
     <header
         style={{
             background: `rebeccapurple`,
@@ -34,4 +34,3 @@ const Header = ({ siteTitle }: HeaderProperties): JSX.Element => (
     </header>
 );
 
-export default Header;

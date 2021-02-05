@@ -1,6 +1,6 @@
 import React from 'react';
 import { PageContextProvider } from './src/contexts/PageContext';
-import i18n from './src/i18n';
+import i18n from './src/i18n/i18n';
 import { I18nextProvider } from 'react-i18next';
 
 /**

@@ -1,12 +1,29 @@
+const path = require('path');
+
 module.exports = {
     siteMetadata: {
         title: `Medrefer`,
-        description: `This Gatsby starter is an adaptation of the default Gatsby starter with TypeScript, ESlint and Prettier pre-configured, bringing you everything you need to get up and running with Gatsby in a type-safe and style-safe way.`,
+        description: ``,
         author: `AllBright`,
         defaultLanguage: 'en',
         supportedLanguages: ['en', 'de'],
     },
     plugins: [
+        `gatsby-plugin-typescript`,
+        {
+            resolve: 'gatsby-plugin-root-import',
+            options: {
+                '@': path.join(__dirname, 'src'),
+                static: path.join(__dirname, 'static'),
+            },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `static`,
+                path: path.join(__dirname, 'static'),
+            },
+        },
         {
             resolve: `gatsby-plugin-ts`,
             options: {

@@ -1,22 +1,15 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React, { ReactNode } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-
-import Header from '../components/header';
+import i18n from 'i18next';
+import { Header } from './Header';
 import './default-layout.css';
-import SEO from '../components/seo';
+import SEO from '@/layouts/seo';
 
 interface LayoutProperties {
     children: ReactNode;
 }
 
-const Layout = ({ children }: LayoutProperties): JSX.Element => {
+export const Layout = ({ children }: LayoutProperties): JSX.Element => {
     const data = useStaticQuery(graphql`
         query SiteTitleQuery {
             site {
@@ -29,7 +22,7 @@ const Layout = ({ children }: LayoutProperties): JSX.Element => {
 
     return (
         <>
-            <SEO title={data.site.siteMetadata.title} />
+            <SEO title={data.site.siteMetadata.title} lang={i18n.language} />
             <Header siteTitle={data.site.siteMetadata.title} />
             <div
                 style={{
@@ -49,4 +42,3 @@ const Layout = ({ children }: LayoutProperties): JSX.Element => {
     );
 };
 
-export default Layout;
