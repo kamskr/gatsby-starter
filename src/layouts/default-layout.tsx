@@ -10,6 +10,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import Header from '../components/header';
 import './default-layout.css';
+import SEO from '../components/seo';
 
 interface LayoutProperties {
     children: ReactNode;
@@ -28,6 +29,7 @@ const Layout = ({ children }: LayoutProperties): JSX.Element => {
 
     return (
         <>
+            <SEO title={data.site.siteMetadata.title} />
             <Header siteTitle={data.site.siteMetadata.title} />
             <div
                 style={{
