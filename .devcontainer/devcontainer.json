@@ -3,5 +3,16 @@
 	"dockerFile": "Dockerfile",
 	"mounts": [
 		"source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume"
+	],
+	"extensions": [
+		"esbenp.prettier-vscode",
+		"formulahendry.auto-close-tag",
+		"coenraads.bracket-pair-colorizer",
+		"vikas.code-navigation",
+		"naumovs.color-highlight",
+		"dsznajder.es7-react-js-snippets",
+		"pkief.material-icon-theme",
+		"wayou.vscode-todo-highlight",
+		"tabnine.tabnine-vscode",
 	]
 }
