@@ -15,7 +15,7 @@ export const wrapRootElement = ({ element }) => {
  */
 export const wrapPageElement = ({ element, props }) => {
     return (
-        <PageContextProvider value={props.pageContext}>
+        <PageContextProvider pageContext={props.pageContext}>
             {element}
         </PageContextProvider>
     );

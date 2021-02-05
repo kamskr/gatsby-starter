@@ -3,7 +3,8 @@ module.exports = {
         title: `Medrefer`,
         description: `This Gatsby starter is an adaptation of the default Gatsby starter with TypeScript, ESlint and Prettier pre-configured, bringing you everything you need to get up and running with Gatsby in a type-safe and style-safe way.`,
         author: `AllBright`,
-        supportedLanguages: ['en', 'el', 'fr'],
+        defaultLanguage: 'en',
+        supportedLanguages: ['en', 'de'],
     },
     plugins: [
         {
@@ -19,6 +20,7 @@ module.exports = {
             },
         },
         `gatsby-plugin-react-helmet`,
+        `gatsby-plugin-netlify`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
