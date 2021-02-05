@@ -1,32 +1,37 @@
 {
+    "compileOnSave": false,
     "compilerOptions": {
-        /* Basic Options */
-        "target": "esnext",
-        "module": "esnext",
-        "lib": ["dom", "esnext"],
-        "jsx": "preserve",
-        "outDir": "./dist",
-        "isolatedModules": true,
-
-        /* Strict Type-Checking Options */
-        "strict": true,
-        "noImplicitAny": true,
-        "strictNullChecks": true,
-        "strictFunctionTypes": true,
-        "strictBindCallApply": true,
-        "strictPropertyInitialization": true,
-        "noImplicitThis": true,
-        "alwaysStrict": true,
-
-        /* Additional Checks */
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "noImplicitReturns": true,
-        "noFallthroughCasesInSwitch": true,
-
-        /* Module Resolution Options */
+        "rootDir": ".",
+        "sourceMap": true,
+        "declaration": false,
         "moduleResolution": "node",
-        "esModuleInterop": true
+        "resolveJsonModule": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "target": "es2015",
+        "module": "esnext",
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "lib": [
+            "esnext",
+            "dom"
+        ],
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
+        "baseUrl": ".",
+        "jsx": "react",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "paths": {
+            "@/*": [
+                "src/*"
+            ]
+        }
     },
-    "exclude": ["node_modules", "public", ".cache"]
+    "exclude": [
+        "node_modules",
+        "tmp",
+    ]
 }

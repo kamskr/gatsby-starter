@@ -1,8 +1,9 @@
 module.exports = {
     siteMetadata: {
-        title: `Gatsby TypeScript + ESlint + Prettier Starter`,
+        title: `Medrefer`,
         description: `This Gatsby starter is an adaptation of the default Gatsby starter with TypeScript, ESlint and Prettier pre-configured, bringing you everything you need to get up and running with Gatsby in a type-safe and style-safe way.`,
-        author: `@Tielem <ttielu@gmail.com>`,
+        author: `AllBright`,
+        supportedLanguages: ['en', 'el', 'fr'],
     },
     plugins: [
         {
